@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'SF Pro display';
+    font-style : normal;
+    font-weight: 500;
+    src        : url(./assets/fonts/sf-pro-display_regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'SF Pro display';
+    font-style : normal;
+    font-weight: 600;
+    src        : url(./assets/fonts/sf-pro-display_semibold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'SF Pro display';
+    font-style : normal;
+    font-weight: 200;
+    src        : url(./assets/fonts/sf-pro-display_light.woff2) format('woff2');
+}
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'SF Pro display';
+  font-size: 15px; }
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  padding: 0;
+  margin: 0; }
+
+.page-nav {
+  background-color: rgba(45, 45, 45, 0.98);
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding: 0 8px; }
+
+.page-nav__menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+  list-style: none; }
+
+.page-nav__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none; }
+
+.page-nav__switcher {
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  font-size: 1rem;
+  position: relative; }
+
+.page-nav__switcher:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 200ms; }
+
+.page-nav__switcher:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 200ms; }
+
+.page-nav.opened .page-nav__switcher:before {
+  transform: translateY(5px) rotate(45deg); }
+
+.page-nav.opened .page-nav__switcher:after {
+  transform: translateY(-4px) rotate(-45deg); }
+
+.page-nav__controls {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+@media (max-width: 767px) {
+  .page-nav__controls {
+    display: flex; }
+  .page-nav.opened {
+    background-color: black; }
+  .page-nav__menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 45px;
+    display: flex;
+    visibility: hidden;
+    transition: all 200ms;
+    transform: scaleY(0);
+    transform-origin: top; }
+  .page-nav.opened .page-nav__menu {
+    visibility: visible;
+    transform: scaleY(1); }
+  .page-nav__link {
+    padding: 15px 0;
+    border-bottom: 1px solid #292929;
+    opacity: 0;
+    transition: opacity 150ms 30ms; }
+  .page-nav.opened .page-nav__link {
+    opacity: 1; } }
+
+
+/*# sourceMappingURL=lesson_6.css.map*/

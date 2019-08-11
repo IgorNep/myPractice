@@ -1,0 +1,11 @@
+{
+  "index": [
+    "./src/index/index.js"
+  ],
+  "lesson_5": [
+    "./src/lesson_5/lesson_5.js"
+  ],
+  "lesson_6": [
+    "./src/lesson_6/lesson_6.js"
+  ]
+}
